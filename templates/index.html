@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Detection</title>
+</head>
+<body>
+    <h2>Animal Detection using YOLOv9</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload and Detect</button>
+    </form>
+    
+    {% if image %}
+    <h3>Uploaded Image:</h3>
+    <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Uploaded Image" width="300">
+    
+    <h3>Detection Result:</h3>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
