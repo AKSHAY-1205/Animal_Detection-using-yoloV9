@@ -13,7 +13,7 @@ CLIENT = InferenceHTTPClient(
 
 # List of farm animals
 farm_animals = [
-    'Cow', 'Pig', 'Sheep', 'Goat', 'Chicken', 'Duck', 'Turkey', 
+    'Cow', 'Sheep', 'Goat', 'Chicken', 'Duck', 'Turkey', 
     'Horse', 'Donkey', 'Rabbit', 'Llama', 'Alpaca', 'Goose', 
     'Guinea Fowl', 'Quail', 'Bee', 'Buffalo', 'Ox', 'Emu', 
     'Ostrich', 'Camel', 'Yak', 'Deer'
@@ -34,7 +34,7 @@ def index():
             file.save(file_path)
             
             # Perform inference
-            result = CLIENT.infer(file_path, model_id="farm-animals-j7dxg/1")
+            result = CLIENT.infer(file_path, model_id="farm-animals-j7dxg/4")
             predictions = result.get('predictions', [])
             
             if predictions:

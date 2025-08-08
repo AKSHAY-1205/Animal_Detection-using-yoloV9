@@ -1,0 +1,26 @@
+# Ignore the static uploads folder
+/static/uploads/
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore local config files
+*.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore build / packaging files
+build/
+dist/
+*.egg-info/
